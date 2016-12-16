@@ -13,6 +13,10 @@ RUN mkdir /opt \
     && ln -s /opt/google-cloud-sdk/bin/gcloud /usr/bin/gcloud \
     && apk -q update \
     && apk -q add python \
+    && apk add --update libintl \
+    && apk add --virtual build_deps gettext \
+    && cp /usr/bin/envsubst /usr/local/bin/envsubst \
+    && apk del build_deps \
     && rm -rf /var/cache/apk/* \
     && echo "y" | gcloud components install kubectl \
     && ln -s /opt/google-cloud-sdk/bin/kubectl /usr/bin/kubectl

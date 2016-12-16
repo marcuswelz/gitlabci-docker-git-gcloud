@@ -3,9 +3,9 @@ docker:git image with Google Cloud SDK and kubectl for Gitlab CI Runner
 
 ## Usage
 
-This is the alpine based `docker:git` image, with the Google Cloud SDK and kubectl added.
+This is the alpine based `docker:git` image, with the Google Cloud SDK, `kubectl`, and `envsubst` added.
 
-It can be used as a foundation to automate _Google Cloud Container Engine_ deployments via gcloud and kubectl commands.
+It can be used as a foundation to automate _Google Cloud Container Engine_ deployments via `gcloud` and `kubectl` commands.
 
 To get started, create a `Service account key` via Google Cloud's API Manager in the Credentials section in JSON format.
 
