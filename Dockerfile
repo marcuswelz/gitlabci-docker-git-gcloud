@@ -10,9 +10,9 @@ RUN apk update \
     && update-ca-certificates \
     && mkdir /opt \
     && cd /opt \
-    && wget -q https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-157.0.0-linux-x86_64.tar.gz \
-    && tar -xzf google-cloud-sdk-157.0.0-linux-x86_64.tar.gz \
-    && rm google-cloud-sdk-157.0.0-linux-x86_64.tar.gz \
+    && wget -q https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-202.0.0-linux-x86_64.tar.gz \
+    && tar -xzf google-cloud-sdk-202.0.0-linux-x86_64.tar.gz \
+    && rm google-cloud-sdk-202.0.0-linux-x86_64.tar.gz \
     && ln -s /opt/google-cloud-sdk/bin/gcloud /usr/bin/gcloud \
     && apk -q add python \
     && apk add --update libintl \
